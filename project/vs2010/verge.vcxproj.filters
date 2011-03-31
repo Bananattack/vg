@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Header Files\core">
+      <UniqueIdentifier>{52e23dec-d65e-4b0c-981c-202c481563a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\os">
+      <UniqueIdentifier>{ec1c7c66-6671-4fd7-8793-8b5a160e24b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\core\os\windows">
+      <UniqueIdentifier>{56824117-f87e-4897-b92e-50be315e95fc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core">
+      <UniqueIdentifier>{17550b48-844d-4833-8f94-6e6d916a0131}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\os">
+      <UniqueIdentifier>{ef7de44f-c733-416b-8c92-4bbc4821156f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\os\windows">
+      <UniqueIdentifier>{0a945d9b-a39e-47ee-96d7-213b55d5a2ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\script">
+      <UniqueIdentifier>{56de9899-982d-4028-9ed8-8bbed8e69aab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\script">
+      <UniqueIdentifier>{ad05a5f0-9cd2-4087-bd88-d931a3bd3396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\graphics">
+      <UniqueIdentifier>{4160e624-5b37-4cef-8fb3-de8804af0b5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\audio">
+      <UniqueIdentifier>{8992ea60-a16f-4cf5-a65c-35f3d64ebe7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\graphics">
+      <UniqueIdentifier>{1ddaeedc-347d-4816-b761-7c48d87286d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{2c33838b-e53e-4d06-9bbb-07b6e0b7a0db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\script\class">
+      <UniqueIdentifier>{7b27fe9c-a44c-4bcd-8d8f-40ddfb2308de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\script\enum">
+      <UniqueIdentifier>{c543daaa-f29e-44b7-9225-987ba4917135}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\script\class">
+      <UniqueIdentifier>{c9a2f44c-b854-4161-add2-55217b4afcec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\script\enum">
+      <UniqueIdentifier>{9719324b-e476-4032-a48b-c734bb3e0382}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\vg\core\platform.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\core\window.cpp">
+      <Filter>Source Files\core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\core\os\windows\platform.cpp">
+      <Filter>Source Files\core\os\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\core\os\windows\window.cpp">
+      <Filter>Source Files\core\os\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\script.cpp">
+      <Filter>Source Files\script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\enum\blend.cpp">
+      <Filter>Source Files\script\enum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\enum\color.cpp">
+      <Filter>Source Files\script\enum</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\class\image.cpp">
+      <Filter>Source Files\script\class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\class\window.cpp">
+      <Filter>Source Files\script\class</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\global.cpp">
+      <Filter>Source Files\script</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\src\vg\script\class.cpp">
+      <Filter>Source Files\script</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\vg\core\window.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\core\platform.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\core\os\windows\platform.hpp">
+      <Filter>Header Files\core\os\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\core\os\windows\window.hpp">
+      <Filter>Header Files\core\os\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\script\script.hpp">
+      <Filter>Header Files\script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\graphics\image.hpp">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\graphics\blend.hpp">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\graphics\color.hpp">
+      <Filter>Header Files\graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\core\common.hpp">
+      <Filter>Header Files\core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\script\class.hpp">
+      <Filter>Header Files\script</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\src\vg\script\global.hpp">
+      <Filter>Header Files\script</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

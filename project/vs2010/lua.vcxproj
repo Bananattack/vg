@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}</ProjectGuid>
+    <RootNamespace>lua</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\lib\lua\lapi.h" />
+    <ClInclude Include="..\..\src\lib\lua\lauxlib.h" />
+    <ClInclude Include="..\..\src\lib\lua\lcode.h" />
+    <ClInclude Include="..\..\src\lib\lua\ldebug.h" />
+    <ClInclude Include="..\..\src\lib\lua\ldo.h" />
+    <ClInclude Include="..\..\src\lib\lua\lfunc.h" />
+    <ClInclude Include="..\..\src\lib\lua\lgc.h" />
+    <ClInclude Include="..\..\src\lib\lua\llex.h" />
+    <ClInclude Include="..\..\src\lib\lua\llimits.h" />
+    <ClInclude Include="..\..\src\lib\lua\lmem.h" />
+    <ClInclude Include="..\..\src\lib\lua\lobject.h" />
+    <ClInclude Include="..\..\src\lib\lua\lopcodes.h" />
+    <ClInclude Include="..\..\src\lib\lua\lparser.h" />
+    <ClInclude Include="..\..\src\lib\lua\lstate.h" />
+    <ClInclude Include="..\..\src\lib\lua\lstring.h" />
+    <ClInclude Include="..\..\src\lib\lua\ltable.h" />
+    <ClInclude Include="..\..\src\lib\lua\ltm.h" />
+    <ClInclude Include="..\..\src\lib\lua\lua.h" />
+    <ClInclude Include="..\..\src\lib\lua\luaconf.h" />
+    <ClInclude Include="..\..\src\lib\lua\lualib.h" />
+    <ClInclude Include="..\..\src\lib\lua\lundump.h" />
+    <ClInclude Include="..\..\src\lib\lua\lvm.h" />
+    <ClInclude Include="..\..\src\lib\lua\lzio.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\lib\lua\lapi.c" />
+    <ClCompile Include="..\..\src\lib\lua\lauxlib.c" />
+    <ClCompile Include="..\..\src\lib\lua\lbaselib.c" />
+    <ClCompile Include="..\..\src\lib\lua\lcode.c" />
+    <ClCompile Include="..\..\src\lib\lua\ldblib.c" />
+    <ClCompile Include="..\..\src\lib\lua\ldebug.c" />
+    <ClCompile Include="..\..\src\lib\lua\ldo.c" />
+    <ClCompile Include="..\..\src\lib\lua\ldump.c" />
+    <ClCompile Include="..\..\src\lib\lua\lfunc.c" />
+    <ClCompile Include="..\..\src\lib\lua\lgc.c" />
+    <ClCompile Include="..\..\src\lib\lua\linit.c" />
+    <ClCompile Include="..\..\src\lib\lua\liolib.c" />
+    <ClCompile Include="..\..\src\lib\lua\llex.c" />
+    <ClCompile Include="..\..\src\lib\lua\lmathlib.c" />
+    <ClCompile Include="..\..\src\lib\lua\lmem.c" />
+    <ClCompile Include="..\..\src\lib\lua\loadlib.c" />
+    <ClCompile Include="..\..\src\lib\lua\lobject.c" />
+    <ClCompile Include="..\..\src\lib\lua\lopcodes.c" />
+    <ClCompile Include="..\..\src\lib\lua\loslib.c" />
+    <ClCompile Include="..\..\src\lib\lua\lparser.c" />
+    <ClCompile Include="..\..\src\lib\lua\lstate.c" />
+    <ClCompile Include="..\..\src\lib\lua\lstring.c" />
+    <ClCompile Include="..\..\src\lib\lua\lstrlib.c" />
+    <ClCompile Include="..\..\src\lib\lua\ltable.c" />
+    <ClCompile Include="..\..\src\lib\lua\ltablib.c" />
+    <ClCompile Include="..\..\src\lib\lua\ltm.c" />
+    <ClCompile Include="..\..\src\lib\lua\lundump.c" />
+    <ClCompile Include="..\..\src\lib\lua\lvm.c" />
+    <ClCompile Include="..\..\src\lib\lua\lzio.c" />
+    <ClCompile Include="..\..\src\lib\lua\print.c" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

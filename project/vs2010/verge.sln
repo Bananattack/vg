@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "verge", "verge.vcxproj", "{13359979-1739-445E-A73E-283D83666130}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6} = {ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lua", "lua.vcxproj", "{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{13359979-1739-445E-A73E-283D83666130}.Debug|Win32.ActiveCfg = Debug|Win32
+		{13359979-1739-445E-A73E-283D83666130}.Debug|Win32.Build.0 = Debug|Win32
+		{13359979-1739-445E-A73E-283D83666130}.Release|Win32.ActiveCfg = Release|Win32
+		{13359979-1739-445E-A73E-283D83666130}.Release|Win32.Build.0 = Release|Win32
+		{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}.Debug|Win32.Build.0 = Debug|Win32
+		{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}.Release|Win32.ActiveCfg = Release|Win32
+		{ACEBE2DC-BD39-4C2B-9644-CEA8818704C6}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
