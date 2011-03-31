@@ -31,8 +31,8 @@ namespace vg
 
     struct PreserveBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -42,7 +42,7 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 
     struct MergeBlender
@@ -97,8 +97,8 @@ namespace vg
 
     struct ScreenBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -108,13 +108,13 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 
     struct MultiplyBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -124,13 +124,13 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 
     struct LightenBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -140,13 +140,13 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 
     struct DarkenBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -156,14 +156,14 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 
 
     struct DifferenceBlender
     {
-		Color operator()(Color source, Color dest, ColorChannel opacity) const
-		{
+        Color operator()(Color source, Color dest, ColorChannel opacity) const
+        {
             int sourceAlpha = source[AlphaChannel] * opacity / 255;
 
             Color result;
@@ -173,7 +173,7 @@ namespace vg
             result[AlphaChannel] = dest[AlphaChannel];
 
             return result;
-		}
+        }
     };
 }
 
