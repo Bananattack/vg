@@ -19,8 +19,7 @@ int CALLBACK WinMain(HINSTANCE instance, HINSTANCE previousInstance, LPSTR comma
     }
 
     std::vector<std::string> arguments;
-    assert(GetModuleHandle(0) == instance);
-	return vg::run(arguments) ? EXIT_SUCCESS : EXIT_FAILURE;
+    return vg::run(arguments) ? EXIT_SUCCESS : EXIT_FAILURE;
 }
 
 

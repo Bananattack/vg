@@ -14,16 +14,16 @@ namespace vg
         if(!registered)
         {
             WNDCLASS windowClass;
-	        memset(&windowClass, 0, sizeof(windowClass));
+            memset(&windowClass, 0, sizeof(windowClass));
 
             windowClass.style = CS_OWNDC;
             windowClass.lpfnWndProc = handleGlobalEvent;
             windowClass.hInstance = GetModuleHandle(0);
             //windowClass.hIcon = LoadIcon(GetModuleHandle(0), MAKEINTRESOURCE(1));
-	        windowClass.hCursor = LoadCursor(0, IDC_ARROW);
-	        windowClass.lpszClassName = ClassName;
+            windowClass.hCursor = LoadCursor(0, IDC_ARROW);
+            windowClass.lpszClassName = ClassName;
 
-	        RegisterClass(&windowClass);
+            RegisterClass(&windowClass);
 
             registered = true;
         }
@@ -52,7 +52,7 @@ namespace vg
         if(!windowHandle)
         {
             registerClass();
-		    windowHandle = CreateWindowEx(0, ClassName, wideTitle.c_str(), WS_OVERLAPPEDWINDOW | WS_THICKFRAME | WS_CAPTION, 0, 0, 0, 0, 0, 0, GetModuleHandle(0), this);
+            windowHandle = CreateWindowEx(0, ClassName, wideTitle.c_str(), WS_OVERLAPPEDWINDOW | WS_THICKFRAME | WS_CAPTION, 0, 0, 0, 0, 0, 0, GetModuleHandle(0), this);
         }
         if(updateResolution())
         {
@@ -108,9 +108,9 @@ namespace vg
             {
                 windowRect.left = 0;
                 windowRect.top = 0;
-	            windowRect.right = image->getWidth();
-	            windowRect.bottom = image->getHeight();
-	            AdjustWindowRect(&windowRect, GetWindowLong(windowHandle, GWL_STYLE), false);
+                windowRect.right = image->getWidth();
+                windowRect.bottom = image->getHeight();
+                AdjustWindowRect(&windowRect, GetWindowLong(windowHandle, GWL_STYLE), false);
 
                 WINDOWPLACEMENT windowPlacement;
                 windowPlacement.length = sizeof(windowPlacement);
@@ -159,8 +159,6 @@ namespace vg
                 windowStyle &= ~WS_POPUP;
                 windowStyle |= WS_OVERLAPPEDWINDOW | WS_THICKFRAME;
                 SetWindowLong(windowHandle, GWL_STYLE, windowStyle);
-
-                return true;
             }
             return true;
         }
@@ -248,43 +246,43 @@ namespace vg
             case WM_CLOSE:
                 dispose();
                 break;
-		    case WM_SYSCOMMAND:
-			    if (wParam == SC_CLOSE)
+            case WM_SYSCOMMAND:
+                if (wParam == SC_CLOSE)
                 {
                     dispose();
                 }
                 break;
-		    case WM_ACTIVATE:
-			    if(LOWORD(wParam) == WA_INACTIVE)
+            case WM_ACTIVATE:
+                if(LOWORD(wParam) == WA_INACTIVE)
                 {
-				    focused = false;
+                    focused = false;
                 }
-			    else
+                else
                 {
-				    focused = true;
+                    focused = true;
                 }
-			    break;
-		    case WM_ACTIVATEAPP:
+                break;
+            case WM_ACTIVATEAPP:
                 focused = !wParam;
-			    break;
+                break;
             case WM_KEYDOWN:
                 return 0;
             case WM_KEYUP:
                 return 0;
-		    case WM_MOUSEMOVE:
+            case WM_MOUSEMOVE:
                 if(!mouseContained)
                 {
                     mouseContained = true;
                     ShowCursor(false);
 
-					TRACKMOUSEEVENT trackRequest;
+                    TRACKMOUSEEVENT trackRequest;
                     memset(&trackRequest, 0, sizeof(trackRequest));
                     trackRequest.cbSize = sizeof(trackRequest);
-					trackRequest.dwFlags = TME_LEAVE;
-					trackRequest.hwndTrack = windowHandle;
-					TrackMouseEvent(&trackRequest);
+                    trackRequest.dwFlags = TME_LEAVE;
+                    trackRequest.hwndTrack = windowHandle;
+                    TrackMouseEvent(&trackRequest);
                 }
-			    break;
+                break;
             case WM_MOUSELEAVE:
                 mouseContained = false;
                 ShowCursor(true);
@@ -336,21 +334,21 @@ namespace vg
 
     void Window::refresh()
     {
-		if(windowHandle)
+        if(windowHandle)
         {
-		    MSG msg;
-		    while(PeekMessageW(&msg, windowHandle, 0, 0, PM_REMOVE))
-		    {
-			    TranslateMessage(&msg);
-			    DispatchMessageW(&msg);
-		    }
-	        if(visible)
+            MSG msg;
+            while(PeekMessageW(&msg, windowHandle, 0, 0, PM_REMOVE))
+            {
+                TranslateMessage(&msg);
+                DispatchMessageW(&msg);
+            }
+            if(visible)
             {
                 RECT rect;
-	            GetClientRect(windowHandle, &rect);
+                GetClientRect(windowHandle, &rect);
 
-	            int width = rect.right - rect.left;
-	            int height = rect.bottom - rect.top;
+                int width = rect.right - rect.left;
+                int height = rect.bottom - rect.top;
                 int internalWidth = width;
                 int internalHeight = height;
 
@@ -385,13 +383,13 @@ namespace vg
                     }
                 }
 
-	            rect.left += (width - internalWidth) / 2;
-	            rect.top += (height - internalHeight) / 2;
-	            rect.right = rect.left + internalWidth;
-	            rect.bottom = rect.top + internalHeight;
+                rect.left += (width - internalWidth) / 2;
+                rect.top += (height - internalHeight) / 2;
+                rect.right = rect.left + internalWidth;
+                rect.bottom = rect.top + internalHeight;
 
-	            ClientToScreen(windowHandle, (POINT*) &rect);
-	            ClientToScreen(windowHandle, ((POINT*) &rect) + 1);
+                ClientToScreen(windowHandle, (POINT*) &rect);
+                ClientToScreen(windowHandle, ((POINT*) &rect) + 1);
 
                 memcpy(backBuffer, image->getRawData(), image->getWidth() * image->getHeight() * 4);
                 StretchBlt(
@@ -410,8 +408,8 @@ namespace vg
 
 
                 // Draw black letterbox bars to occupy unused window space.
-	            if(internalWidth != width || internalHeight != height)
-	            {
+                if(internalWidth != width || internalHeight != height)
+                {
                     BitBlt(frontDeviceContext, 0, 0, (width - internalWidth) / 2, height, NULL, 0, 0, BLACKNESS);
                     BitBlt(frontDeviceContext, (width - internalWidth) / 2 + internalWidth, 0, (width - internalWidth) / 2, height, NULL, 0, 0, BLACKNESS);
                     BitBlt(frontDeviceContext, 0, 0, width, (height - internalHeight) / 2, NULL, 0, 0, BLACKNESS);
