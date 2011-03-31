@@ -1,0 +1,9 @@
+project/vs2010/Debug
+project/vs2010/Release
+project/vs2010/ipch
+project/vs2010/*.opensdf
+project/vs2010/*.sdf
+project/vs2010/*.suo
+project/vs2010/*.vcxproj.user
+*.obj
+*.o

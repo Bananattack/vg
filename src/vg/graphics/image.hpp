@@ -696,6 +696,7 @@ namespace vg
                 drawRegion(0, 0, width - 1, height - 1, x, y, dest, f);
             }
 
+        private:
             template<typename BlendFunction> void baseDrawRegion(int sourceX, int sourceY, int sourceX2, int sourceY2,
                     int destX, int destY, Image* dest, BlendFunction f)
             {
@@ -754,6 +755,7 @@ namespace vg
                 }
             }
 
+        public:
             void drawRegion(int sourceX, int sourceY, int sourceX2, int sourceY2, int destX, int destY, Image* dest, CopyBlender f)
             {
                 // No clipping, and drawing the full source in copy blend? Just copy it raw.
@@ -768,7 +770,7 @@ namespace vg
                 }
             }
 
-            template<typename BlendFunction> void _drawRegion(int sourceX, int sourceY, int sourceX2, int sourceY2,
+            template<typename BlendFunction> void drawRegion(int sourceX, int sourceY, int sourceX2, int sourceY2,
                     int destX, int destY, Image* dest, BlendFunction f)
             {
                 baseDrawRegion(sourceX, sourceY, sourceX2, sourceY2, destX, destY, dest, f);
